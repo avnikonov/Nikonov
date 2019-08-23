@@ -10,7 +10,7 @@ import ru.testing.entities.Weather;
 @Slf4j
 public class YandexWeatherGateway {
     private static final String URL = "https://api.weather.yandex.ru/v1/informers";
-    private static final String TOKEN = "1bfac500-a11f-4512-ac1e-b0829a2743ce";
+    private static final String TOKEN = "";
 
     @SneakyThrows
     public Weather getWeather(String latitude, String longitude, String language) {
