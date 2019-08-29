@@ -13,17 +13,12 @@ import javax.print.DocFlavor;
 public class YandexTranslateGateway {
     private static final String URL = "https://translate.yandex.net/api/v1.5/tr/translate";
     private static final String TOKEN = "trnsl.1.1.20190828T181138Z.a297420ecf6fdb7b.72ad3b4c90a993e47eaec5b06768e37e361e90b0";
-    private static final String lang = "en-ru";
-    private static final String format = "plain";
-    private static final String options = "1";
-    private static final String text = "Hello World!";
 
     @SneakyThrows
-    public Translate getTranslate(String key, String text, String lang, String format, String options) {
+    public Translate getTranslate(String text, String lang, String format, String options) {
         Gson gson = new Gson();
         HttpResponse<String> response = Unirest.post(URL)
                 .header("Accept", "*/*")
-                .header("Content-Type", "application/x-www-form-urlencoded")
                 .field("key", TOKEN)
                 .field("text", text)
                 .field("lang", lang)
