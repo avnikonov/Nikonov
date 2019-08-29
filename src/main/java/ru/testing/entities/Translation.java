@@ -6,7 +6,7 @@ import lombok.Getter;
 
 @Getter
 @Builder
-public class Translate {
+public class Translation {
     @SerializedName("code")
     public Integer code;
     @SerializedName("detected")
