@@ -8,7 +8,7 @@ import ru.testing.gateway.YandexTranslateGateway;
 
 public class YandexTranslateTest {
     private static final String TEXTFORTRANSLATION = "Hello World!";
-    private static final String PURPOSEFORTRANSLATION = "Всем Привет!";
+    private static final String PURPOSEFORTRANSLATION = "[Всем Привет!]";
 
 
     @Test

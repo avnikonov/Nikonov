@@ -1,18 +1,28 @@
 package ru.testing.entities;
 
+import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import lombok.Builder;
 import lombok.Getter;
 
+import java.util.List;
+
 @Getter
 @Builder
 public class Translation {
+
     @SerializedName("code")
-    public Integer code;
+    @Expose
+    private Integer code;
     @SerializedName("detected")
-    public Detected detected;
+    @Expose
+    private Detected detected;
     @SerializedName("lang")
-    public String lang;
+    @Expose
+    private String lang;
     @SerializedName("text")
-    public String text;
+    @Expose
+    private List<String> text = null;
+
+
 }

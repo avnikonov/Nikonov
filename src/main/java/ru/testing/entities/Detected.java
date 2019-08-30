@@ -1,5 +1,6 @@
 package ru.testing.entities;
 
+import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import lombok.Builder;
 import lombok.Getter;
@@ -8,5 +9,7 @@ import lombok.Getter;
 @Builder
 public class Detected {
     @SerializedName("lang")
-    public String lang;
-}
+    @Expose
+    private String lang;
+
+    }
