@@ -8,7 +8,7 @@ import ru.testing.gateway.YandexTranslateGateway;
 
 public class YandexTranslateTest {
     private static final String TEXTFORTRANSLATION = "Hello World!";
-    private static final String PURPOSEFORTRANSLATION = "[Всем Привет!]";
+    private static final String PURPOSEFORTRANSLATION = "Всем Привет!";
 
 
     @Test
@@ -16,6 +16,6 @@ public class YandexTranslateTest {
     public void currentTranslation(){
         YandexTranslateGateway yandexTranslateGateway = new YandexTranslateGateway();
         Translation translation = yandexTranslateGateway.getTranslate(TEXTFORTRANSLATION);
-        Assertions.assertEquals(PURPOSEFORTRANSLATION, translation.getText());
+        Assertions.assertEquals(PURPOSEFORTRANSLATION, translation.getText().get(0));
     }
 }

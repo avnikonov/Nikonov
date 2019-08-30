@@ -22,7 +22,7 @@ public class Translation {
     private String lang;
     @SerializedName("text")
     @Expose
-    private List<String> text = null;
+    private List<String> text;
 
 
 }
